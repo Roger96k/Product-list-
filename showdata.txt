@@ -1,0 +1,13 @@
+        public void showdata()
+        {
+           
+         
+            con.Open();
+            SqlDataAdapter dpt =  new SqlDataAdapter("select Product Id,Productname,categoryid,CategoryName from [Product],[Category]", con);
+            DataTable dt = new DataTable();
+            dpt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+
+
+        }
